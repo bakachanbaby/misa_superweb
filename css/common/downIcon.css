@@ -1,0 +1,57 @@
+.m-content-table-row-setting {
+    position: relative;
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.m-c-t-r-box {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.m-content-table-row-setting-text {
+    color: #0075C0;
+    transition: 0.3s;
+    margin-right: 6px;
+}
+
+.m-content-table-row-setting-text:hover {
+    font-family: BAKA font Bold;
+}
+
+.m-content-table-row-icon {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -890px -356px;
+    width: 30px;
+    height: 24px;
+}
+
+.m-content-table-row-icon:hover {
+    border: 1px solid #0075C0;
+}
+
+.m-c-t-r-data {
+    position: absolute;
+    left: -50%;
+    top: 100%;
+    width: 150%;
+    padding: 6px;
+    box-shadow: 0 3px 5px #BBBBBB;
+    display: none;
+    z-index: 2;
+    background-color: #ffffff;
+}
+
+.m-c-t-r-item {
+    height: 30px;
+    margin-bottom: 6px;
+    padding-left: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.m-c-t-r-item:hover {
+    background-color: #E8E9EC;
+    color: #47CA58;
+}

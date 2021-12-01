@@ -1,0 +1,29 @@
+.m-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #2BA01D;
+    border-radius: 4px;
+    height: 35px;
+    color: #fff;
+    padding: 0 24px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+    white-space: nowrap;
+    /*chữ luôn ở 1 dòng*/
+    box-sizing: border-box;
+}
+
+.m-btn:hover {
+    background-color: #278f1b;
+}
+
+.m-btn:active {
+    background-color: #35c525;
+}
+
+.m-btn .m-btn-text {
+    font-family: BAKA font Bold;
+}

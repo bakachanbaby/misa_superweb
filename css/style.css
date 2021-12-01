@@ -1,0 +1,60 @@
+/* Base css */
+
+@import url(./base/button.css);
+
+/* @import url(./base/dialog.css); */
+
+@import url(./base/icon.css);
+@import url(./base/input.css);
+@import url(./base/toast.css);
+
+/* Common */
+
+@import url(./common/checkbox.css);
+@import url(./common/combobox.css);
+@import url(./common/common.css);
+@import url(./common/icon.css);
+@import url(./common/paging-navigation.css);
+@import url(./common/table.css);
+@import url(./common/downIcon.css);
+
+/* Layout css */
+
+@import url(./layout/navbar.css);
+@import url(./layout/header.css);
+@import url(./layout/content.css);
+
+/* PopUpPage */
+
+@import url(./popuppage.css);
+
+/* Popupdelete */
+
+@import url(./popupdelete.css);
+body {
+    font-family: BAKA font;
+    margin: 0;
+}
+
+
+/* Font */
+
+@font-face {
+    font-family: BAKA font;
+    src: url('../content/fonts/notosans-regular.2cb88a13.woff2');
+}
+
+@font-face {
+    font-family: BAKA font Bold;
+    src: url('../content/fonts/notosans-bold.3ede5aff.woff2');
+}
+
+@font-face {
+    font-family: BAKA font Italic;
+    src: url('../content/fonts/notosans-italic.1c1aaac9.woff2');
+}
+
+@font-face {
+    font-family: BAKA font semibold;
+    src: url('../content/fonts/notosans-semibold.df3e6dc4.woff2');
+}

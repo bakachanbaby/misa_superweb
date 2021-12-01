@@ -1,0 +1,178 @@
+.navbar {
+    float: left;
+    width: 178px;
+    height: 100vh;
+    background-color: #393A3D;
+    border-right: 1px solid #656666;
+    color: white;
+    border-radius: 0;
+}
+
+.navbar .m-logo-box {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+}
+
+
+/* narbar logo */
+
+.navbar .m-logo-box .m-toggle {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../content/img/icons8-squared-menu-100.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 10px;
+}
+
+.navbar .m-logo-box .m-logo-page {
+    width: 200px;
+    flex: 1;
+    height: 35px;
+    margin-left: 15px;
+    background-image: url(../../content/favicon.ico);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.m-text {
+    font-size: 16px;
+    font-family: BAKA font Bold;
+    margin-right: 6px;
+}
+
+
+/* navbar content */
+
+.navbar .m-navbar-box {
+    width: 100%;
+    height: calc(100vh - 59px);
+    overflow: scroll;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 1px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #393A3D;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(175, 175, 175);
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(122, 122, 122);
+}
+
+.m-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0px 16px 0 10px;
+    height: 44px;
+    color: white;
+    cursor: pointer;
+}
+
+.m-menu-item:hover {
+    background-color: #5D5D61;
+}
+
+.m-menu-item:active {
+    font-family: BAKA font Bold;
+    background-color: #e4e4e488;
+    border-left: 7px solid #2CA01C;
+}
+
+.m-menu-item-icon {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 10px 0 5px;
+}
+
+
+/* .m-menu-item-text {} */
+
+
+/* Icon của từng item */
+
+.m-menu-item-icon.i-overview {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -33px -1587px;
+}
+
+.m-menu-item-icon.i-cash {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -78px -1588px;
+}
+
+.m-menu-item-icon.i-deposit {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -121px -1590px;
+}
+
+.m-menu-item-icon.i-purchas {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -165px -1589px;
+}
+
+.m-menu-item-icon.i-sell {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -206px -1588px;
+    width: 24px !important;
+    height: 20px !important;
+    margin-left: 0px !important;
+}
+
+.m-menu-item-icon.i-bill {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -254px -1589px;
+}
+
+.m-menu-item-icon.i-warehouse {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -294px -1589px;
+}
+
+.m-menu-item-icon.i-tools {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -339px -1590px;
+}
+
+.m-menu-item-icon.i-asset {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -382px -1589px;
+}
+
+.m-menu-item-icon.i-tax {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -427px -1591px;
+}
+
+.m-menu-item-icon.i-price {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -471px -1590px;
+}
+
+.m-menu-item-icon.i-general {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -514px -1590px;
+}
+
+.m-menu-item-icon.i-bank {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -427px -1664px;
+}
+
+.m-menu-item-icon.i-notify {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -552px -1593px;
+}
+
+.m-menu-item-icon.i-financial-analysis {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -251px -1667px;
+}

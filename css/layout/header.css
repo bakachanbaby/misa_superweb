@@ -1,0 +1,74 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    float: left;
+    font-size: 15px;
+    height: 59px;
+    width: calc(100% - 178px);
+}
+
+.m-header-left,
+.m-header-right {
+    display: flex;
+    cursor: pointer;
+    padding: 20px;
+    align-items: center;
+}
+
+
+/* Header left */
+
+.m-header-l-icon.m-header-l-icon-bar {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -847px -35px;
+    width: 16px;
+    height: 14px;
+}
+
+.m-header-l-icon.m-header-l-icon-checkdown {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -1129px -365px;
+    width: 14px;
+    height: 8px;
+}
+
+.m-header-l-icon {
+    margin-right: 10px;
+}
+
+.m-header-l-text {
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+
+/* Header right */
+
+.m-header-r-icon {
+    margin-left: 16px;
+}
+
+.m-header-r-icon.m-header-r-icon-bell {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -788px -30px;
+    width: 22px;
+    height: 25px;
+    margin-right: 16px;
+}
+
+.m-header-r-icon.m-header-r-icon-bell:hover {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -257px -32px;
+    width: 22px;
+    height: 25px;
+}
+
+.m-header-r-avatar.m-header-r-icon-user {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -352px -894px;
+    border-radius: 50%;
+    margin: 0px 6px;
+    width: 32px;
+    height: 32px;
+}
+
+.m-header-r-icon.m-header-l-icon-checkdown {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -1078px -38px;
+    width: 9px;
+    height: 6px;
+}

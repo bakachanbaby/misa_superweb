@@ -1,0 +1,65 @@
+.m-row {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.m-row-2 {
+    display: flex;
+    width: 100%;
+}
+
+.m-row>label {
+    display: block;
+    margin: 4px 0 10px;
+    font-weight: bold;
+}
+
+.text-align-center,
+.text-align-left,
+.text-align-right {
+    text-transform: capitalize;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.m-loading {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.36);
+}
+
+.m-loading .m-loading-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 5px solid yellowgreen;
+    border-top: 5px solid green;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

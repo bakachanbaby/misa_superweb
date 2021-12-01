@@ -1,0 +1,90 @@
+.m-combobox {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    min-width: 100px;
+    padding: 0 12px;
+    outline: unset;
+}
+
+.m-combobox:hover {
+    border-color: #019160;
+}
+
+.mcombobox {
+    width: 420px;
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.mcombobox input {
+    border-radius: 4px;
+    padding: 0 56px 0 16px;
+}
+
+
+/* 
+.mcombobox.m-input-select {
+    border: 1px solid red;
+    border-radius: 4px;
+} */
+
+.mcombobox.m-input-select input {
+    border: 1px solid red;
+}
+
+.mcombobox.m-input-select .m-combobox-button {
+    border-left: 1px solid red;
+}
+
+.mcombobox input:focus~button {
+    border-color: #019160;
+    color: #019160;
+}
+
+.mcombobox .m-combobox-button {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 0 4px 4px 0;
+    text-align: center;
+    border-left: 1px solid #BBBBBB;
+    position: absolute;
+    right: 0;
+    background-color: unset;
+    color: #000000;
+}
+
+.mcombobox .m-combobox-button:hover {
+    background-color: #d6d6d6;
+}
+
+.mcombobox .m-combobox-data {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    box-shadow: 0 3px 5px #BBBBBB;
+    display: none;
+    z-index: 2;
+    background-color: #ffffff;
+}
+
+.m-combobox-choose {
+    padding-right: 32px;
+    min-width: 250px
+}
+
+.mcombobox .m-combobox-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 34px;
+}
+
+.mcombobox .m-combobox-item:hover,
+.m-combobox-item-hover {
+    background-color: #adadad !important;
+    cursor: pointer;
+}

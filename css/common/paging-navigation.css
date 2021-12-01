@@ -1,0 +1,62 @@
+.m-paging {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    width: 100%;
+}
+
+.m-paging .m-paging-left {
+    padding: 16px;
+    font-size: 15px;
+}
+
+.m-paging .m-paging-right {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 16px;
+}
+
+.m-paging-hover {
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    line-height: 32px;
+    border: none;
+    cursor: pointer;
+}
+
+.m-paging-hover.page-number-1 {
+    border: 1px solid #bbbbbb;
+    font-family: BAKA font Bold;
+}
+
+.m-paging-hover:hover {
+    border: 1px solid #bbbbbb;
+    font-family: BAKA font Bold;
+}
+
+.m-paging-hover.m-paging-prev {
+    width: 125px;
+}
+
+.m-paging-hover.m-paging-next {
+    width: 100px;
+}
+
+.combobox-count {
+    margin-right: 16px;
+}
+
+.m-paging-prev,
+.page-number,
+.m-paging-next {}
+
+.m-paging-number {
+    display: flex;
+}
+
+.m-paging .m-paging-right select {
+    font-size: 15px;
+}

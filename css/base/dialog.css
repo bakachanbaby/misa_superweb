@@ -1,0 +1,92 @@
+.m-dialog {
+    position: relative;
+    border-radius: 4px;
+    max-width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.m-dialog-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* HEADER */
+
+.m-dialog .m-dialog-header {
+    background-color: #FFFFFF;
+    padding: 24px;
+    border-radius: 4px 4px 0 0;
+}
+
+.m-dialog .m-dialog-header .m-dialog-title {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.m-dialog .m-dialog-header .m-dialog-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    width: 24px;
+    height: 24px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.m-dialog .m-dialog-header .m-dialog-close:hover {
+    opacity: 1;
+}
+
+
+/* CONTENT */
+
+.m-dialog .m-dialog-content {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 0 24px 24px 24px;
+}
+
+.m-dialog .m-dialog-content .m-dialog-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    margin-right: 10px;
+    background-color: #F4F4F4;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #E92A2A;
+}
+
+
+/* FOOTER */
+
+.m-dialog .m-dialog-footer {
+    display: flex;
+    justify-content: end;
+    background-color: #F4F4F4;
+    padding: 10px 24px;
+    border-radius: 0 0 4px 4px;
+}
+
+.m-dialog .m-dialog-footer .m-btn-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}

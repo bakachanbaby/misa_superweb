@@ -1,0 +1,98 @@
+.k-dialog {
+    position: relative;
+    border-radius: 4px;
+    max-width: 500px;
+    height: 50vh;
+    font-size: 13px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.k-dialog-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* CONTENT */
+
+.k-dialog-content {
+    display: flex;
+    padding: 64px 32px 32px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.k-dialog-content-left {
+    margin-right: 16px;
+}
+
+strong {
+    color: red;
+}
+
+
+/* FOOTER */
+
+.k-dialog-footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 0 0 4px 4px;
+}
+
+.k-dialog-footer .k-btn-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    margin-left: 15px;
+}
+
+#k-d-f-close,
+#k-d-f-save {
+    background-color: white;
+    font-family: BAKA font Bold;
+    color: black;
+    border: 1px solid black;
+    min-width: 20px !important;
+    transition: 0.3s;
+}
+
+#k-d-f-close:hover,
+#k-d-f-save:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+#k-d-f-save-add {
+    transition: 0.3s;
+}
+
+.k-dialog-footer-right {
+    display: flex;
+}
+
+.k-dialog-c-l-icon {
+    background: url('../content/img/Sprites.64af8f61.svg') no-repeat -598px -463px;
+    width: 36px;
+    height: 37px;
+}
+
+#k-d-f-delete {
+    font-family: BAKA font Bold;
+    min-width: 50px !important;
+}
+
+
+/* ERROR POPUP */
+
+#kien-d-f-close {
+    font-family: BAKA font Bold;
+}

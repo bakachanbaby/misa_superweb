@@ -1,0 +1,73 @@
+.content {
+    float: left;
+    width: calc(100% - 178px);
+    height: calc(100vh - 59px);
+    background-color: #f3f3f3;
+}
+
+
+/* main table */
+
+.m-content-table {
+    margin: 16px;
+    background-color: white;
+}
+
+
+/* tittle */
+
+.m-content-tittle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.m-tittle-l-text {
+    font-family: BAKA font Bold;
+    font-size: 20px;
+    margin: 16px 0 0 16px;
+}
+
+.m-tittle-right {
+    margin: 16px 16px 0 16px;
+}
+
+
+/* search */
+
+.m-content-search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 16px;
+}
+
+.m-row.m-l-search input {
+    min-width: 250px;
+    height: 40px;
+    margin-right: 16px;
+}
+
+.m-content-search-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-content-table-box {
+    padding: 0 16px;
+    height: calc(100vh - 260px);
+    overflow: scroll;
+}
+
+#btnRefresh {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -1024px -29px;
+    width: 22px;
+    height: 24px;
+}
+
+#btnRefresh:hover {
+    background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -493px -31px;
+    width: 22px;
+    height: 24px;
+}
