@@ -37,7 +37,7 @@ class Employee {
 
         $.ajax({
             type: "GET",
-            url: "http://cukcuk.manhnv.net/api/v1/Employees",
+            url: "http://amis.manhnv.net/api/v1/Employees",
             async: false,
             success: function(response) {
                 employees = response;
@@ -49,15 +49,15 @@ class Employee {
                     let tr = $(`<tr>
                                 <td><input type="checkbox"></td>
                                 <td class="text-align-left">${e.EmployeeCode}</td>
-                                <td class="text-align-left">${e.FullName}</td>
+                                <td class="text-align-left">${e.EmployeeName}</td>
                                 <td class="text-align-left">${e.GenderName}</td>
                                 <td class="text-align-center">${e.DateOfBirth}</td>
-                                <td class="text-align-center">${""}</td>
-                                <td class="text-align-left" >${e.PositionName}</td>
+                                <td class="text-align-left">${e.IdentityNumber}</td>
+                                <td class="text-align-left" >${e.EmployeePosition}</td>
                                 <td class="text-align-left">${e.DepartmentName}</td>
-                                <td class="text-align-left">${""}</td>
-                                <td class="text-align-right" >${""}</td>
-                                <td class="text-align-left">${e.Address}</td>
+                                <td class="text-align-left">${e.BankAccountNumber}</td>
+                                <td class="text-align-left" >${e.BankName}</td>
+                                <td class="text-align-left">${e.BankBranchName}</td>
                                 <td class="text-align-left">
                                     <div class="m-content-table-row-setting">
                                     <div class="m-c-t-r-box">
@@ -165,12 +165,18 @@ class Employee {
         this.HideError();
         //Clean các giá trị đã được nhập trước đó;
         // reset input
-        $("input").val(null);
+        let inputs = $("#dlgPopup input");
+        for (const input of inputs) {
+            if ($(input).attr('type') != 'radio') {
+                $(input).val(null);
+            }
+        }
+
 
         // Lấy mã nhân viên mới và hiện thị lên ô nhập mã nhân viên
         $.ajax({
             type: "GET",
-            url: "http://cukcuk.manhnv.net/api/v1/Employees/NewEmployeeCode",
+            url: "http://amis.manhnv.net/api/v1/Employees/NewEmployeeCode",
             success: function(response) {
                 // Lấy dữ liệu mã nhân viên
                 $("#m-employeeCode-txt").val(response);
@@ -191,14 +197,15 @@ class Employee {
         // Clean error
         this.HideError();
         this.FormMode = Enum.FormMode.Update;
-        let currentRow = $('tr.m-row-selected');
+        let currentRow = sender.currentTarget;
+        let test = $(currentRow).parents("tr");
 
-        let employeeId = $(currentRow).data('employeeId');
+        let employeeId = $(test).data('employeeId');
         this.EmployeeIdSelected = employeeId;
         // Gọi api lấy dữ liệu chi tiết nhân viên:
         $.ajax({
             type: "GET",
-            url: `http://cukcuk.manhnv.net/api/v1/Employees/${employeeId}`,
+            url: `http://amis.manhnv.net/api/v1/Employees/${employeeId}`,
             // async: false,
             // async: true,
             success: function(e) {
@@ -323,14 +330,15 @@ class Employee {
             let value = input.value;
             if (value)
                 e[fieldName] = value;
-
         }
+
         let radioCheck = $('input[type=radio]:checked');
         // console.log(radioCheck);
-        let radiofieldName = radioCheck.attr("fieldName");
+        let radiofieldName = $('#m-employeeGender-txt').attr("fieldName");
         let radiovalue = radioCheck.val();
         if (radiovalue)
             e[radiofieldName] = radiovalue;
+        // debugger
         // Duyệt các combobox 
         let comboboxs = $('#dlgPopup div[mcombobox]');
         // Duyệt từng thằng combobox lấy ra value:
@@ -345,7 +353,7 @@ class Employee {
         }
         console.log(e);
         const idHTML = e.EmployeeCode;
-        const fullnameHTML = e.FullName;
+        const fullnameHTML = e.EmployeeName;
         const DepartmentHTML = e.DepartmentId;
         if (idHTML == null || fullnameHTML == null || DepartmentHTML == null) {
             if (idHTML == null) {
@@ -369,9 +377,9 @@ class Employee {
         if (this.FormMode == Enum.FormMode.Add) {
             $.ajax({
                 type: "POST",
-                url: "http://cukcuk.manhnv.net/api/v1/Employees",
+                url: "http://amis.manhnv.net/api/v1/Employees",
                 data: JSON.stringify(e),
-                async: true,
+                async: false,
                 dataType: "json",
                 contentType: "application/json",
                 success: function(response) {
@@ -411,7 +419,7 @@ class Employee {
         } else {
             $.ajax({
                 type: "PUT",
-                url: `http://cukcuk.manhnv.net/api/v1/Employees/${this.EmployeeIdSelected}`,
+                url: `http://amis.manhnv.net/api/v1/Employees/${this.EmployeeIdSelected}`,
                 data: JSON.stringify(e),
                 dataType: "json",
                 contentType: "application/json",
@@ -498,7 +506,7 @@ class Employee {
         // Gọi api thực hiện xóa
         $.ajax({
             type: "DELETE",
-            url: `http://cukcuk.manhnv.net/api/v1/Employees/${this.EmployeeIdSelected}`,
+            url: `http://amis.manhnv.net/api/v1/Employees/${this.EmployeeIdSelected}`,
 
             success: function(response) {
                 // Ẩn delete popup
@@ -526,7 +534,7 @@ class Employee {
         // Gọi api lấy dữ liệu chi tiết nhân viên:
         $.ajax({
             type: "GET",
-            url: `http://cukcuk.manhnv.net/api/v1/Employees/${employeeId}`,
+            url: `http://amis.manhnv.net/api/v1/Employees/${employeeId}`,
             // async: false,
             // async: true,
             success: function(e) {
