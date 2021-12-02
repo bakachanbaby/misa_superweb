@@ -61,7 +61,7 @@ class MCombobox {
             const id = combobox.getAttribute('id');
             // Build HTML của combobox:
             let comboboxHTML = $(`<div mcombobox id="${id||''}" class="mcombobox" fieldName = "${fieldName}">
-                                <input type="text"class="m-combobox m-combobox-input">
+                                <input type="text" fieldName = "${fieldName}"  class="m-combobox m-combobox-input">
                                 <button tabindex="-1" class="m-combobox-button">
                                     <i class="fas fa-chevron-down"></i>
                                 </button>

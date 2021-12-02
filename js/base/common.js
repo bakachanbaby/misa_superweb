@@ -18,6 +18,18 @@ class CommonJS {
         } else
             return "";
     }
+    static formatYYYYMMDD(date) {
+        if (date) {
+            const dateOfBirth = new Date(date);
+            let day = dateOfBirth.getDate();
+            day = (day < 10 ? `0${day}` : day);
+            let month = dateOfBirth.getMonth() + 1;
+            month = (month < 10 ? `0${month}` : month);
+            let year = dateOfBirth.getFullYear();
+            return `${year}-${month}-${day}`;
+        } else
+            return "";
+    }
 
     /**
      * Định dạng hiện thị mức lương là xxx.xxx.xxxđ

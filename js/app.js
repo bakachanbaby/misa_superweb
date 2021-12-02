@@ -217,16 +217,40 @@ class Employee {
                 for (const input of inputs) {
                     let fieldName = input.getAttribute("fieldName");
                     let value = e[fieldName];
+                    // Lấy value của ngày sinh
+                    if (fieldName == 'DateOfBirth') {
+                        value = CommonJS.formatYYYYMMDD(value);
+                        // console.log(value);
+                    }
                     if (value)
                         input.value = value;
                     else
                         input.value = null
                 }
-                console.log(e);
+                // Lấy value của radio input và tích lựa chọn
+                let radiofieldName = $('#m-employeeGender-txt').attr("fieldName");
+                let radiovalue = e[radiofieldName];
+                $(`input[value=${radiovalue}]`).prop('checked', true);
 
-                // Hiện thị form chi tiết
-                $("#dlgPopup").show();
 
+                let comboboxs = $('#dlgPopup div[mcombobox]');
+                // Duyệt từng thằng combobox lấy ra value:
+                for (const combobox of comboboxs) {
+                    let value = $(combobox).attr('value');
+                    let fieldName = $(combobox).data('fieldName');
+                    if (fieldName) {
+                        e[fieldName] = value;
+                    }
+                    // debugger
+
+                    // }
+                    console.log(e);
+                    // Lấy value của combobox và cho vào input
+
+                    // Hiện thị form chi tiết
+                    $("#dlgPopup").show();
+
+                }
             }
         });
 
@@ -331,7 +355,7 @@ class Employee {
             if (value)
                 e[fieldName] = value;
         }
-
+        // Duyệt các radio
         let radioCheck = $('input[type=radio]:checked');
         // console.log(radioCheck);
         let radiofieldName = $('#m-employeeGender-txt').attr("fieldName");
