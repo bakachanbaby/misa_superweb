@@ -432,23 +432,32 @@ class Employee {
                     let fieldName = input.getAttribute("fieldName");
                     let value = e[fieldName];
                     // console.log(me.dataDepartment(value));
+                    // -----------------------
+                    let items = $('.m-dialog-content-box div[mcombobox] .m-combobox-item');
+                    let text = null;
+                    // -------------------------
                     // Lấy value của ngày sinh
                     if (fieldName == 'DateOfBirth') {
                         value = CommonJS.formatYYYYMMDD(value);
                         // console.log(value);
                     }
-                    // Lấy value của phòng ban 
-                    else if (fieldName == 'DepartmentId') {
-                        // me.dataDepartment(e[fieldName]);
-                        // value = me.GetId;
-                        value = null;
-                        // console.log(e[fieldName]);
-                        // console.log(value);
+                    for (const item of items) {
+                        if ($(item).attr('value') == value) {
+                            text = $(item).text();
+                            break;
+                        }
                     }
-                    if (value)
-                        input.value = value;
-                    else
-                        input.value = null
+                    if (text) {
+                        $(input).val(text);
+                    } else {
+
+                        if (value)
+                            input.value = value;
+                        else
+                            input.value = null
+                    }
+
+
                 }
                 // Lấy value của radio input và tích lựa chọn
                 let radiofieldName = $('#m-employeeGender-txt').attr("fieldName");
