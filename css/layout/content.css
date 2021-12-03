@@ -60,6 +60,9 @@
     overflow: scroll;
 }
 
+
+/* Btn refresh */
+
 #btnRefresh {
     background: url('../../content/img/Sprites.64af8f61.svg') no-repeat -1024px -29px;
     width: 22px;

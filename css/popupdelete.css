@@ -18,23 +18,23 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+strong {
+    color: red;
+}
+
 
 /* CONTENT */
 
 .k-dialog-content {
     display: flex;
     padding: 64px 32px 32px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: #FFFFFF;
 }
 
 .k-dialog-content-left {
     margin-right: 16px;
-}
-
-strong {
-    color: red;
 }
 
 
@@ -56,6 +56,19 @@ strong {
     margin-left: 15px;
 }
 
+.k-dialog-footer-right {
+    display: flex;
+}
+
+.k-dialog-c-l-icon {
+    background: url('../content/img/Sprites.64af8f61.svg') no-repeat -598px -463px;
+    width: 36px;
+    height: 37px;
+}
+
+
+/* btn close and save  */
+
 #k-d-f-close,
 #k-d-f-save {
     background-color: white;
@@ -75,15 +88,8 @@ strong {
     transition: 0.3s;
 }
 
-.k-dialog-footer-right {
-    display: flex;
-}
 
-.k-dialog-c-l-icon {
-    background: url('../content/img/Sprites.64af8f61.svg') no-repeat -598px -463px;
-    width: 36px;
-    height: 37px;
-}
+/* btn delete */
 
 #k-d-f-delete {
     font-family: BAKA font Bold;

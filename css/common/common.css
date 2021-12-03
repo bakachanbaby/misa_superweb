@@ -33,6 +33,9 @@
     text-align: right;
 }
 
+
+/* Loading page */
+
 .m-loading {
     /* display: none; */
     position: absolute;

@@ -18,6 +18,13 @@ class CommonJS {
         } else
             return "";
     }
+
+    /**
+     * Định dạng hiện thị thông tin ngày là (yyyy-mm-dd)
+     * @param {Date} date
+     * Author: BAKACHAN
+     *  */
+
     static formatYYYYMMDD(date) {
         if (date) {
             const dateOfBirth = new Date(date);

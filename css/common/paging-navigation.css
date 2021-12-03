@@ -9,6 +9,7 @@
 .m-paging .m-paging-left {
     padding: 16px;
     font-size: 15px;
+    display: flex;
 }
 
 .m-paging .m-paging-right {
@@ -27,7 +28,8 @@
     cursor: pointer;
 }
 
-.m-paging-hover.page-number-1 {
+.m-paging-hover.page-number-active {
+    /* background-color: aquamarine !important; */
     border: 1px solid #bbbbbb;
     font-family: BAKA font Bold;
 }

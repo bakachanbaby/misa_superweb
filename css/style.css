@@ -13,7 +13,6 @@
 @import url(./common/checkbox.css);
 @import url(./common/combobox.css);
 @import url(./common/common.css);
-@import url(./common/icon.css);
 @import url(./common/paging-navigation.css);
 @import url(./common/table.css);
 @import url(./common/downIcon.css);
@@ -31,6 +30,9 @@
 /* Popupdelete */
 
 @import url(./popupdelete.css);
+
+/* body */
+
 body {
     font-family: BAKA font;
     margin: 0;

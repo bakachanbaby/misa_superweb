@@ -13,12 +13,12 @@ input.m-input {
     color: #bbbbbb;
 }
 
-
-/* tạo bg cho khi nhập */
-
 .m-input:focus {
     border-color: #2BA01D;
 }
+
+
+/* tạo bg cho khi nhập */
 
 .m-input.m-input-search {
     background: url('/content/img/Screenshot_2021-11-27_164411-removebg-preview.png');
@@ -37,18 +37,8 @@ input.m-input {
     color: #bbbbbb;
 }
 
-.m-input.m-input-error {
-    border-color: #ff0000;
-}
-
-.m-input.m-input-error+.m-error-info {
-    top: 22%;
-    position: absolute;
-    border: 1px solid #FF4646;
-    background-color: #FF4646;
-    border-radius: 4px;
-    color: white;
-    padding: 8px;
+input.m-input.m-input-select {
+    border: 1px solid #ff0000 !important;
 }
 
 .m-arrow-bottom {
@@ -70,14 +60,27 @@ input.m-input {
     box-sizing: border-box;
 }
 
+
+/* Error input */
+
+.m-input.m-input-error {
+    border-color: #ff0000;
+}
+
+.m-input.m-input-error+.m-error-info {
+    top: 22%;
+    position: absolute;
+    border: 1px solid #FF4646;
+    background-color: #FF4646;
+    border-radius: 4px;
+    color: white;
+    padding: 8px;
+}
+
 .m-input-box .m-error-info {
     text-align: center;
     /* width: 100%; */
     box-sizing: border-box;
-}
-
-input.m-input.m-input-select {
-    border: 1px solid #ff0000 !important;
 }
 
 .m-input-alert-error {

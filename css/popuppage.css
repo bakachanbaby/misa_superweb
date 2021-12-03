@@ -1,3 +1,5 @@
+/* Popup page liên quan đến xóa nhân viên, lưu ý cho nhân viên */
+
 .m-dialog {
     position: relative;
     border-radius: 4px;
@@ -18,6 +20,10 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+strong {
+    color: red;
+}
+
 
 /* HEADER */
 
@@ -33,6 +39,10 @@
 .m-dialog-header-left {
     display: flex;
     align-items: center;
+}
+
+.m-dialog-header-right {
+    display: flex;
 }
 
 .m-dialog-header .m-dialog-title {
@@ -52,9 +62,8 @@
     align-items: center;
 }
 
-.m-dialog-header-right {
-    display: flex;
-}
+
+/* Btn help and close */
 
 .m-dialog-help,
 .m-dialog-close {
@@ -93,10 +102,6 @@
 .m-dialog-content {
     padding: 24px;
     background-color: #FFFFFF;
-}
-
-strong {
-    color: red;
 }
 
 .m-dialog-content-line {

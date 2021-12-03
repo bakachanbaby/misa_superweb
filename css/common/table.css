@@ -1,6 +1,6 @@
 table.m-table {
     width: 100%;
-    height: 100vh;
+    height: 10vh;
     /* border-spacing: unset; */
     border: none;
     border-collapse: collapse;
@@ -24,10 +24,12 @@ table.m-table tbody {
 }
 
 table.m-table tbody tr {
+    max-height: 50px;
     background-color: #f0f0f0;
 }
 
 table.m-table tbody tr:nth-child(2n-1) {
+    max-height: 50px;
     background-color: #f8f8f8;
 }
 

@@ -83,6 +83,9 @@
     background: rgb(122, 122, 122);
 }
 
+
+/* navbar item */
+
 .m-menu-item {
     display: flex;
     align-items: center;
@@ -107,9 +110,6 @@
     height: 20px !important;
     margin: 0 10px 0 5px;
 }
-
-
-/* .m-menu-item-text {} */
 
 
 /* Icon của từng item */

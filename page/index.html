@@ -16,11 +16,13 @@
 <body>
     <!-- Narbar -->
     <div class="navbar">
+        <!-- Narbar logo -->
         <div class="m-logo-box">
             <div class="m-toggle"></div>
             <div class="m-logo-page"></div>
             <div class="m-text">Kế toán</div>
         </div>
+        <!-- Narbar content -->
         <div class="m-navbar-box">
             <div class="m-menu-item">
                 <div class="m-menu-item-icon i-overview"></div>
@@ -95,6 +97,7 @@
             </div>
             <div class="m-header-l-icon m-header-l-icon-checkdown"></div>
         </div>
+        <!-- Header right -->
         <div class="m-header-right">
             <div class="m-header-r-icon m-header-r-icon-bell"></div>
             <div class="m-header-r-avatar m-header-r-icon-user"></div>
@@ -161,23 +164,22 @@
                         </tbody>
                     </table>
                 </div>
-
             </div>
+            <!-- Content paging -->
             <div class="m-paging">
-                <div class="m-paging-left">Tổng số: <strong> 1000 </strong> bản ghi</div>
+                <div class="m-paging-left">Tổng số:
+                    <strong id="totalRecord"> </strong> bản ghi</div>
                 <div class="m-paging-right">
+
                     <select class="m-combobox combobox-count" name="" id="cbxPageSize">
-                        <option value="10">20 bản ghi / trang</option>
+                        <option value="10">10 bản ghi / trang</option>
+                        <option value="20">20 bản ghi / trang</option>
+                        <option value="30">30 bản ghi / trang</option>
                         <option value="50">50 bản ghi / trang</option>
                         <option value="100">100 bản ghi / trang</option>
                     </select>
                     <div class="m-paging-hover m-paging-prev">Trước</div>
                     <div class="m-paging-number">
-                        <div class="m-paging-hover page-number page-number-1">1</div>
-                        <div class="m-paging-hover page-number">2</div>
-                        <div class="m-paging-hover page-number">3</div>
-                        <div class="m-paging-hover page-number">4</div>
-                        <div class="m-paging-hover page-number">5</div>
                     </div>
                     <div class="m-paging-hover m-paging-next">Sau</div>
                 </div>
@@ -195,6 +197,8 @@
                 <div class="m-dialog">
                     <!-- DIALOG HEADER -->
                     <div class="m-dialog-header">
+                        <!-- DIALOG HEADER Left -->
+
                         <div class="m-dialog-header-left">
                             <div class="m-dialog-title">
                                 Thông tin nhân viên
@@ -208,6 +212,8 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- DIALOG HEADER right -->
+
                         <div class="m-dialog-header-right">
                             <div id="m-dialog-help" class="m-dialog-help"></div>
                             <div id="m-dialog-close" class="m-dialog-close"></div>
@@ -216,6 +222,7 @@
                     </div>
                     <!-- DIALOG CONTENT -->
                     <div class="m-dialog-content">
+
                         <div class="m-dialog-content-line">
                             <div class="m-dialog-content-line-side">
                                 <div class="m-dialog-content-box">
@@ -363,6 +370,7 @@
                             <div class="k-d-c-r-text">Bạn có chắc chắn muốn xóa nhân viên [Mã nhân viên] không?</div>
                         </div>
                     </div>
+                    <!-- DIALOG FOOTER -->
                     <div class="k-dialog-footer">
                         <div class="k-dialog-footer-left">
                             <button id="k-d-f-close" class="m-btn m-btn-nobg m-btn-footer">Không</button>
@@ -377,6 +385,7 @@
 
         </div>
     </div>
+    <!-- Popup lưu ý   -->
 
     <div class="k-popup">
         <div class="m-row">
@@ -389,9 +398,9 @@
                             <div class="k-dialog-c-l-icon"></div>
                         </div>
                         <div class="kien-dialog-content-right">
-                            <div class="k-d-c-r-text">Bạn có chắc chắn muốn xóa nhân viên [Mã nhân viên] không?</div>
-                        </div>
+                            / </div>
                     </div>
+                    <!-- DIALOG FOOTER -->
                     <div class="k-dialog-footer">
                         <div class="k-dialog-footer-left">
                             <!-- <button id="k-d-f-close" class="m-btn m-btn-nobg m-btn-footer">Không</button> -->
@@ -406,13 +415,13 @@
 
         </div>
     </div>
-
+    <!-- Load trang -->
     <div class="m-loading">
         <div class="m-loading-icon">
 
         </div>
     </div>
-
+    <!-- Toast box (không sử dụng) -->
     <div class="m-toast-box">
         <div id="m-toast-error" class="m-toast-msg m-toast-error" style="display: none;">
             <div class="m-toast-icon"><i class="fas fa-exclamation-triangle"></i></div>
@@ -431,10 +440,10 @@
 <!-- js -->
 <!-- Cac js dùng chung -->
 <script src="../js/base/enum.js"></script>
-<script src="/js/combobox.js"></script>
 <script src="../js/base/common.js"></script>
-<script src="../js/app.js"></script>
+<script src="/js/combobox.js"></script>
 <!-- Cac js dùng riêng -->
+<script src="../js/app.js"></script>
 <!-- <script src="/js/downicon.js"></script> -->
 
 
