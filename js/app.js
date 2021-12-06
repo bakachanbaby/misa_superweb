@@ -32,28 +32,6 @@ class Employee {
     }
 
     /**
-     * Thực hiện lấy data của phòng ban
-     * author: Bakachan
-     */
-    dataDepartment(DeID) {
-        // Lấy dữ liệu về
-        $.ajax({
-            type: "GET",
-            url: "http://amis.manhnv.net/api/v1/Departments",
-            // async: faltrue,
-            success: function(response) {
-                // Buid combobox
-                for (const department of response) {
-                    if (DeID == department.DepartmentId) {
-                        this.GetId = department.DepartmentName;
-                        break;
-                    }
-                }
-            }
-        });
-    }
-
-    /**
      * Thực hiện load dữ liệu
      * author: Bakachan
      */
@@ -126,14 +104,7 @@ class Employee {
                     $('.m-paging .m-paging-number').prepend(buttonHTML);
                     endButton--;
                 }
-                // else {
 
-                //     if (currentPageIndex == endButton) {
-                //         buttonHTML.addClass('page-number-active');
-                //     }
-                //     $('.m-paging .m-paging-number').prepend(buttonHTML);
-                //     endButton--;
-                // }
             }
 
         } else {
@@ -160,13 +131,7 @@ class Employee {
                 }
                 $('.m-paging .m-paging-number').prepend(buttonHTML);
                 endButton--;
-                // } else {
-                //     if (currentPageIndex == endButton) {
-                //         buttonHTML.addClass('page-number-active');
-                //     }
-                //     $('.m-paging .m-paging-number').prepend(buttonHTML);
-                //     endButton--;
-                // }
+
             }
 
         }
@@ -333,7 +298,7 @@ class Employee {
         $("tbody").on('click', '.m-c-t-r-activate', this.dataEmployeeDelete.bind(this))
 
         // Nhấn vào btn xóa để xóa nhân viên
-        $('tbody').on('click', '#k-d-f-delete', this.delete.bind(this));
+        $('#k-d-f-delete').on('click', this.delete.bind(this));
 
         // me.btnOnClickChangePage();
         // Tìm kiếm nhân viên
@@ -448,16 +413,16 @@ class Employee {
                         }
                     }
                     if (text) {
-                        $(input).val(text);
-                    } else {
-
-                        if (value)
-                            input.value = value;
-                        else
-                            input.value = null
+                        value = text;
+                        // $(input).val(text);
                     }
+                    // else {
 
-
+                    if (value)
+                        input.value = value;
+                    else
+                        input.value = ""
+                        // }
                 }
                 // Lấy value của radio input và tích lựa chọn
                 let radiofieldName = $('#m-employeeGender-txt').attr("fieldName");
@@ -641,7 +606,6 @@ class Employee {
                 e[fieldName] = value;
             }
             // debugger
-
         }
         // Lấy mã nhân viên
         const idHTML = e.EmployeeCode;
@@ -761,9 +725,6 @@ class Employee {
         $('#k-d-f-close').click(() => {
             $('#k-dlgPopup').hide();
         })
-
-
-
     }
 
     /**
@@ -798,7 +759,6 @@ class Employee {
      * Load data về mã nhân viên cần xóa
      * author: Bakachan
      */
-
     dataEmployeeDelete() {
         // debugger
 

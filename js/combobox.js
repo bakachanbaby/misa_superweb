@@ -111,6 +111,8 @@ class MCombobox {
 
 
 function inputComboboxOnKeyUp() {
+
+    debugger
     // Loại bỏ một số phím đặc biệt:
     switch (event.keyCode) {
         case 13:
@@ -127,7 +129,7 @@ function inputComboboxOnKeyUp() {
             // Thực hiện lọc dữ liệu trong data item:
             // 1. Lấy value đã nhập trên input:
             const valueInput = this.value;
-            // $('.m-combobox-data .m-combobox-item').filter(function() {
+            // $('.m-combobox-data .t-combobox-item').filter(function() {
             //     $(this).toggle($(this).text().toLowerCase().indexOf(valueInput) > -1);
             // });
 
@@ -145,6 +147,7 @@ function inputComboboxOnKeyUp() {
 
             break;
     }
+
 }
 
 function inputComboboxOnKeyDown() {

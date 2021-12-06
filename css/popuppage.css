@@ -1,16 +1,5 @@
 /* Popup page liên quan đến xóa nhân viên, lưu ý cho nhân viên */
 
-.m-dialog {
-    position: relative;
-    border-radius: 4px;
-    max-width: 900px;
-    height: 100vh;
-    font-size: 13px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .m-dialog-modal {
     position: fixed;
     top: 0;
@@ -18,6 +7,17 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.m-dialog {
+    position: relative;
+    border-radius: 4px;
+    max-width: 900px;
+    height: 70vh;
+    font-size: 13px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 strong {
